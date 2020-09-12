@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:#aaa9a9;
+    /* margin-left: 14px;
+    margin-right: 14px; */
+    font-family: 'Montserrat';
+}
+/* basic setting done */
+
+/* header css starts here */
+header{
+    position: fixed;
+    top:0%;
+    left:0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding:15px;
+    background:#252627;
+}
+header #logo{
+    font-family: 'Montserrat';
+    font-weight: 100;
+    color:white;
+}
+header ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li {
+    list-style-type: none;
+    margin:8px;
+}
+header ul li a {
+    text-decoration:none;
+    color:white;
+    font-family:'Montserrat';
+}
+/* header css done */
+
+/* sidebars css starts here  */
+    .float_left,.float_right,.float_right2{
+        position: fixed;
+        background: white;
+        width: 20vw;
+        height: 450px;
+        /* border-radius: 15px; */
+    }
+    .float_left{
+        top:11%;
+        left:7%;
+    }
+    .float_right{
+        top:11%;
+        right: 7%;
+    }
+    .float_right2{
+        right: 7%;
+        top:72%;
+        height: 150px;
+    }
+/* sidebars css ends here  */
+
+/* content section css starts here */
+.content_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:83px;
+    max-width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.content{
+    width:100%;
+    height: auto;
+    background:white;
+    border:none;
+    /* border-radius: 15px; */
+    margin-bottom: 6px;
+    padding:10px 15px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+.top_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid rgb(105, 104, 104);
+    padding-bottom: 5px;
+}
+.author_info{
+    display: flex;
+    align-items: center;
+   
+}
+.author_info .imgbox{
+    padding:5px;
+    border-radius: 50%;
+    background: gray;
+    margin-right: 5px;
+}
+.author_name h1{
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
+.credential{
+    font-size: 12px;
+    color:rgb(134, 134, 134);
+}
+.blog_heading{
+    margin-top:10px;
+}
+.blog_heading h2{
+    font-size: 18px;
+}
+.blog_content{
+    padding-top:10px;
+    padding-bottom: 10px;
+    overflow-y:auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.blog_content p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.blog_content img{
+    width:100%;
+    max-width:620px;
+    max-height: 350px;
+    margin-top:10px;
+    background: gray;
+}
+.bottom_box{
+    border-top:1px solid rgb(105, 104, 104);
+    padding-top:5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.like_box,.share_box{
+    display: flex;
+    align-items: center;
+}
+/* content section css ends here */
+
+@media screen and (max-width:1499px){
+    .float_right,.float_right2,.float_left{
+        display: none;
+    }
+}
+@media screen and (max-width:540px){
+    header{
+        justify-content: flex-start;
+    }
+    header ul {
+        display: none;
+    }
+}
