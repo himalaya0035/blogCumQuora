@@ -23,6 +23,9 @@
     <div class="float_left">
 
     </div>
+    <div class="askQuestion">
+        <a href="#">What is your question Himalaya ?</a>
+    </div>
     <div class="content_container">
         <div class="content">
             <div class="top_box">
@@ -198,6 +201,12 @@
 
     </div>
     <script src="js/main.js"></script>
+    <script>
+         window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0)
+        })
+    </script>
 </body>
 
 </html>
