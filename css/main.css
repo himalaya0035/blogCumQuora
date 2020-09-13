@@ -208,7 +208,7 @@ header ul li a {
     max-width: 620px;
     height: 300px;
 }
-.options{
+.options,.mobileNavbar{
     display: none;
 }
 .bottom_box {
