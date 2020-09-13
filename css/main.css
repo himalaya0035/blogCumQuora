@@ -267,9 +267,11 @@ header ul li a {
         display: flex;
         justify-content: center;
         align-items: center;
+        -webkit-tap-highlight-color: transparent;
     }
     .addQuestion{
         margin: 5px;
+        -webkit-tap-highlight-color: transparent;
     }
     /* option css ends here */
 
@@ -311,9 +313,11 @@ header ul li a {
     .mobileNavbar a{
         color: white;
         display: block;
+        -webkit-tap-highlight-color: transparent;
     }
     .mobileNavbar .fa{
         font-size:20px;
+        -webkit-tap-highlight-color: transparent;
     }
     /* .mobileNavbar > div.active_links a{
         color:black;
