@@ -22,8 +22,15 @@ function adjustBlogContent() {
         blogContent[i].innerHTML = res + '...' + ' <a href="#" style="color:gray; text-decoration:none;">' + 'Read More' + '</a>';
         }
         else{
-        blogContent[i].innerHTML = res + '...' + ' <a href="#" style="color:gray; text-decoration:none;">' + 'Read More' + '</a>' + `<img src="${checkImage.src}">`;
-        }
+        blogContent[i].innerHTML = res + '...' + ' <a href="#" style="color:gray; text-decoration:none;">' + 'Read More' + '</a>';
+        var imgbox = document.createElement("div")
+        imgbox.classList.add("imgbox2")
+        var img = document.createElement("img")
+        img.src = checkImage.src
+        imgbox.appendChild(img)
+        blogContent[i].appendChild(imgbox)
+        // Well done himalaya 🥳🥳🎉🎉
+    }
     }
 }
 window.addEventListener("resize", adjustBlogContent);
