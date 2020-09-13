@@ -13,7 +13,8 @@ html {
 }
 
 body {
-    background: #f7f7f7;
+    /* background: #F0F0F0; */
+    background: #E6E6E6;
 
     font-family: 'Montserrat';
 }
@@ -198,8 +199,6 @@ header ul li a {
     height: 300px;
     margin-top: 10px;
     margin-bottom: 4px;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     justify-content: center;
 }
@@ -209,7 +208,9 @@ header ul li a {
     max-width: 620px;
     height: 300px;
 }
-
+.options{
+    display: none;
+}
 .bottom_box {
     border-top: 1px solid rgb(105, 104, 104);
     padding-top: 5px;
@@ -236,17 +237,45 @@ header ul li a {
 }
 
 @media screen and (max-width:540px) {
+    /* header css for mobile */
     header {
         justify-content: space-between;
         align-items: center;
     }
-
+    header ul {
+        display: none;
+    }
     header #logo {
         font-size: 10px;
     }
+    /* header css ends here */
 
-    header ul {
-        display: none;
+    /* options css starts here */
+    .options{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 10%;
+        right:2%;
+    }
+    .addPost{
+        width:40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgb(61, 60, 60);
+        margin:5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .addQuestion{
+        margin: 5px;
+    }
+    /* option css ends here */
+
+    /* content css starts here */
+    .content_container{
+        margin-bottom: 50px;
     }
     .blog_content .imgbox2{
         height: 180px;
@@ -261,4 +290,37 @@ header ul li a {
     .askQuestion {
         margin-top: 55px;
     }
+    /* content css ends here */
+
+    /* mobile navbar css starts here */
+    .mobileNavbar{
+        position: fixed;
+        bottom: 0%;
+        left:0%;
+        width: 100%;
+        background: #4c4c4d;
+        display: flex;
+    }
+    .mobileNavbar > div {
+        flex: 1;
+        padding-top:15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .mobileNavbar a{
+        color: white;
+        display: block;
+    }
+    .mobileNavbar .fa{
+        font-size:20px;
+    }
+    /* .mobileNavbar > div.active_links a{
+        color:black;
+    }
+    .mobileNavbar > div.active_links{
+        background: white;
+    } */
+
+    /* mobile navbar css ends here */
 }
