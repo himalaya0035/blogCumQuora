@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Feed</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -20,8 +21,8 @@
             <li><a href="#">Login</a></li>
         </ul>
         <div class="searchIcon">
-         <img src="images/search.svg" alt="" width="19">
-         </div>
+            <img src="images/search.svg" alt="" width="19">
+        </div>
     </header>
     <div class="float_left">
 
@@ -49,9 +50,9 @@
             <div class="blog_content" id="test">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nesciunt pariatur, debitis ipsum
                     facilis id magni maiores laudantium nihil dolorum?</p>
-                    
-                        <img src="images/test.jpg" alt="">
-            
+
+                <img src="images/test.jpg" alt="">
+
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis error atque odio architecto, veniam
                     ipsam nisi fugiat voluptate itaque unde ea aliquam voluptates eaque et minus temporibus inventore
                     maiores.</p>
@@ -94,9 +95,9 @@
                     floor and saw only one other woman already working if I craned my neck.
 
                     By my first night, I had found that this talk of hazing couldn’t be further from the truth.</p>
-                  
-                        <img src="images/test2.jpg" alt="">
-                
+
+                <img src="images/test2.jpg" alt="">
+
                 <p> As soon as I was put on a line, two guys jumped at every opportunity to explain things they didn’t
                     have to explain. They smiled and nodded and trained me with gusto. My line lead just seemed tickled
                     that I was working with him. Every time I had a question and approached him, he got a big grin,
@@ -182,9 +183,9 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nobis error atque odio architecto, veniam
                     ipsam nisi fugiat voluptate itaque unde ea aliquam voluptates eaque et minus temporibus inventore
                     maiores.</p>
-                   
-                        <img src="images/test3.jpg" alt="">
-               
+
+                <img src="images/test3.jpg" alt="">
+
                 <p>Himalaya gupta adkhd awhjkhkj askjhx jhhfj bjkwhrjkfhkjhfejh jhfjeh jkhfjhjkefjk hdjsh kjsdhdfh kjshd
                     khewjkfhkj hjhj jkhfjhfjh jwkhjhfjk ewhjfhjhfjh kjshjfegfjagshgj hgfhwej gjfgjw egfjg</p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates quia repellendus fugiat rem
@@ -210,12 +211,37 @@
     <div class="float_right2">
 
     </div>
+    <div class="options">
+        <div class="addQuestion">
+            <a href="#" title="Add a Question"><img src="images/plus.svg" alt="" width="40"></a>
+        </div>
+        <div class="addPost">
+            <a href="#" title="Write Post"><img src="images/pencil2.svg" alt="" width="25"></a>
+        </div>
+    </div>
+    <div class="mobileNavbar">
+        <div class="home active_links">
+            <a href="#" class=""><i class="fa fa-home" aria-hidden="true" style="font-size: 22px;"></i></a>
+        </div>
+        <div class="questions">
+            <a href="#"><i class="fa fa-edit" aria-hidden="true" style="font-size: 22px;"></i></a>
+        </div>
+        <div class="notifications">
+            <a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
+        </div>
+        <div class="messages">
+            <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+    </div>
     <script src="js/main.js"></script>
     <script>
-         window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function () {
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0)
         })
+        // $(document).on('click', 'div div', function () {
+        //      $(this).addClass('active_links').siblings().removeClass('active_links')
+        //  })
     </script>
 </body>
 
