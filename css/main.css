@@ -427,7 +427,6 @@ header ul li a {
         width: 100%;
         background: rgb(26, 25, 20);
         display: flex;
-        z-index: 3;
     }
     .mobileNavbar > div {
         flex: 1;
