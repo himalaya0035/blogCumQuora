@@ -37,15 +37,15 @@
                 <h5>Student at JIIT Noida</h5>
             </div>
             <div class="cross">
-                <i class="fa fa-close" style="color: white;"></i>
+                <i class="fa fa-close " style="color: white;"></i>
             </div>
         </div>
         <hr>
         <ul class="sidebarList">
-           <li><a href=""><i class="fa fa-bar-chart"></i> Stats</a></li>
-           <li><a href=""><i class="fa fa-bookmark"></i> Bookmarked</a></li>
-           <li><a href=""><i class="fa fa-file"></i> Drafts</a></li>
-        </ul>  
+            <li><a href=""><i class="fa fa-bar-chart"></i> Stats</a></li>
+            <li><a href=""><i class="fa fa-bookmark"></i> Bookmarked</a></li>
+            <li><a href=""><i class="fa fa-file"></i> Drafts</a></li>
+        </ul>
         <hr>
         <ul class="sidebarList">
             <li><a href=""><i class="fa fa-user"></i> Accounts</a></li>
@@ -54,8 +54,20 @@
         <hr>
         <ul class="sidebarList">
             <li><a href=""><i class="fa fa-lightbulb-o"></i> Change mode</a></li>
-           <li><a href=""><i class="fa fa-sign-out"></i> Logout</a></li>
+            <li><a href=""><i class="fa fa-sign-out"></i> Logout</a></li>
         </ul>
+    </div>
+    <div class="searchSidebar">
+        <div class="top_section_searchBar">
+            <div class="back">
+                <img src="images/back.svg" alt="" width="26">
+            </div>
+            <form action="#">
+                <input type="text" name=""  id="searchInput" placeholder="Search Uwrite...">
+                <button type="submit" id="searchBtn"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <hr>
     </div>
     <!-- <div class="float_left">
 
@@ -252,17 +264,17 @@
             <a href="#" title="Write Post"><img src="images/pencil2.svg" alt="" width="25"></a>
         </div>
     </div>
-    <div class="mobileNavbar">
-        <div class="home active_links">
+    <div class="mobileNavbar tabs_container">
+        <div class="home tabs">
             <a href="#" class=""><i class="fa fa-home" aria-hidden="true" style="font-size: 22px;"></i></a>
         </div>
-        <div class="questions">
+        <div class="questions tabs">
             <a href="#"><i class="fa fa-edit" aria-hidden="true" style="font-size: 22px;"></i></a>
         </div>
-        <div class="notifications">
+        <div class="notifications tabs">
             <a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
         </div>
-        <div class="messages">
+        <div class="messages tabs">
             <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
         </div>
     </div>
@@ -272,16 +284,6 @@
             var header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0)
         })
-        var sidebar = document.getElementsByClassName('mobileSidebar')[0];
-        var toggler = document.getElementsByClassName('sidebarToggler')[0];
-        var cross = document.getElementsByClassName('cross')[0];
-        toggler.addEventListener('click', function(){
-            sidebar.classList.add('active')
-        })
-        cross.addEventListener('click',function(){
-            sidebar.classList.remove('active')
-        })
-        // if (sidebar.classList.contains('active'))
     </script>
 </body>
 
