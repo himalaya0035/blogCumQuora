@@ -71,7 +71,7 @@ header ul li a {
 .imgbox3{
     display: none;
 }
-.mobileSidebar{
+.mobileSidebar,.searchSidebar{
     display: none;
 }
 /* sidebar css neds here */
@@ -242,7 +242,7 @@ header ul li a {
     }
 }
 
-@media screen and (max-width:540px) {
+@media screen and (max-width:720px) {
     /* header css for mobile */
     header {
         justify-content: space-between;
@@ -275,6 +275,7 @@ header ul li a {
             width:300px;
             background-color: #080808;
             transition: 0.5s;
+            z-index: 2;
         }
         div.active{
             left: 0%;
@@ -327,6 +328,52 @@ header ul li a {
         }
     /* sidebar css ends here */
 
+    /* search sidebar css starts here */
+    div.searchSidebar{
+        display: block;
+        position: fixed;
+        top:0%;
+        right:-100%;
+        height: 100%;
+        width:100%;
+        background-color: black;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    div.active2{
+        right: 0%;
+    }
+    .top_section_searchBar{
+        display: flex;
+        padding: 10px;
+        padding-top:15px;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    .back{
+        margin-right: 5px;
+        width: 10%;
+    }
+    .top_section_searchBar form{
+        display: flex;
+        width: 90%;
+    }
+    #searchBtn{
+        background: white;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 5px;
+    }
+    #searchInput{
+        width:100%;
+        max-width:300px;
+        border: none;
+        padding:10px 5px;
+    }
+    #searchInput:focus{
+        outline: none;
+    }
+    /* search sidebar css ends here */
 
     /* options css starts here */
     .options{
@@ -358,10 +405,10 @@ header ul li a {
         margin-bottom: 50px;
     }
     .blog_content .imgbox2{
-        height: 180px;
+        height: 280px;
     }
     .blog_content img{
-        height: 180px;
+        height: 280px;
     }
     .searchIcon {
         display: block;
@@ -380,6 +427,7 @@ header ul li a {
         width: 100%;
         background: rgb(26, 25, 20);
         display: flex;
+        z-index: 3;
     }
     .mobileNavbar > div {
         flex: 1;
@@ -387,22 +435,28 @@ header ul li a {
         padding-bottom: 15px;
         display: flex;
         justify-content: center;
+        
     }
-    .mobileNavbar a{
+    .mobileNavbar > div a{
         color: white;
         display: block;
         -webkit-tap-highlight-color: transparent;
+        transition: 0.5s;
     }
-    .mobileNavbar .fa{
+    /* .mobileNavbar > div a i.fa{
         font-size:20px;
         -webkit-tap-highlight-color: transparent;
     }
-    /* .mobileNavbar > div.active_links a{
-        color:black;
-    }
-    .mobileNavbar > div.active_links{
-        background: white;
+    .mobileNavbar > div a i.active_links{
+        color:rgb(233, 152, 152);
     } */
-
     /* mobile navbar css ends here */
+}
+@media screen and (max-width:420px){
+    .blog_content .imgbox2{
+        height: 180px;
+    }
+    .blog_content img{
+        height: 180px;
+    }
 }
