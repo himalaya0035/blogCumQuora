@@ -39,7 +39,6 @@ header {
 header.sticky {
     box-shadow: 4px 0px 5px rgb(56, 55, 55);
 }
-
 header #logo {
     font-family: 'Montserrat';
     font-weight: 100;
@@ -284,6 +283,7 @@ header ul li a {
             padding:10px;
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
         }
          .imgbox4 a{
             background: white;
@@ -299,14 +299,14 @@ header ul li a {
         .userInfo h3{
             color:white;
             font-weight: 600;
-            margin-top:5px;
+            margin-top:10px;
             margin-bottom: 3px;
-            font-size: 18px;
+            font-size: 20px;
         }
         .userInfo h5{
             color:white;
             font-weight: 100;
-            font-size: 12px;
+            font-size: 14px;
             margin-bottom: 5px;
         }
         .sidebarList{
@@ -322,6 +322,9 @@ header ul li a {
             text-decoration: none;
             font-size: 18px;
         }
+        .cross i {
+            font-size:20px;
+        }
     /* sidebar css ends here */
 
 
@@ -334,8 +337,8 @@ header ul li a {
         right:2%;
     }
     .addPost{
-        width:40px;
-        height: 40px;
+        width:45px;
+        height: 45px;
         border-radius: 50%;
         background: #1a1914;
         margin:5px;
@@ -365,7 +368,7 @@ header ul li a {
     }
 
     .askQuestion {
-        margin-top: 55px;
+        margin-top: 48px;
     }
     /* content css ends here */
 
