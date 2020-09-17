@@ -15,7 +15,7 @@ html {
 body {
     /* background: #F0F0F0; */
     background: #E6E6E6;
-
+    position: relative;
     font-family: 'Montserrat';
 }
 
@@ -24,6 +24,7 @@ body {
 /* header css starts here */
 header {
     position: fixed;
+    -webkit-transform: translateZ(0);
     top: 0%;
     left: 0%;
     display: flex;
@@ -34,11 +35,13 @@ header {
     /* background: #4c4c4d; */
     background: rgb(26, 25, 20);
     transition: 0.5s;
+    z-index: 2;
 }
 
 header.sticky {
     box-shadow: 4px 0px 5px rgb(56, 55, 55);
 }
+
 header #logo {
     font-family: 'Montserrat';
     font-weight: 100;
@@ -68,41 +71,130 @@ header ul li a {
 /* header css done */
 
 /* sidebars css starts here  */
-.imgbox3{
+.imgbox3 {
     display: none;
 }
-.mobileSidebar,.searchSidebar{
+
+.mobileSidebar,
+.searchSidebar {
     display: none;
 }
-/* sidebar css neds here */
 
 
-/* .float_left,
-.float_right,
-.float_right2 {
-    position: fixed;
+/* desktp super container */
+.desktopSuperContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 90px;
+}
+
+.leftOfDesktop,
+.rightOfDesktop {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     background: white;
-    width: 20vw;
-    height: 450px;
-} */
-
-/* .float_left {
-    top: 11%;
-    left: 7%;
 }
 
-.float_right {
-    top: 11%;
-    right: 7%;
+.leftOfDesktop {
+    margin-left: 8px;
 }
 
-.float_right2 {
-    right: 7%;
-    top: 72%;
-    height: 150px;
-} */
+.rightOfDesktop {
+    margin-right: 8px;
+}
 
-/* sidebars css ends here  */
+/* css below this wiil be inherited in mobile versions */
+/* leftofdesktop content css */
+.top_section_sidebar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.imgbox4 a {
+    background: black;
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userInfo h3 {
+    color: black;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 20px;
+}
+
+.userInfo h5 {
+    color: rgb(134, 134, 134);
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.sidebarList {
+    padding: 10px;
+}
+
+.sidebarList li {
+    list-style-type: none;
+}
+
+.sidebarList li a {
+    color: black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* inherited css ends here */
+
+
+/* rightofdesktop css starts here */
+.heading_section {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topicBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(105, 104, 104);
+    padding: 15px 10px;
+}
+
+.topicBox h3 {
+    font-size: 1em;
+    font-weight: 800;
+    color: rgb(49, 49, 49);
+}
+
+.loadMoreProfiles a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(119, 118, 118);
+}
+
+/* rightofdesktop css ends here */
+
+
+/* ends here */
+
 
 /* content section css starts here */
 .content_container,
@@ -110,17 +202,89 @@ header ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 6px;
     max-width: 650px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 12px;
+    margin-right: 12px;
 }
-
+.FollowProfilesContainer{
+    max-width: 650px;
+    width:100%;
+    background: white;
+    margin-bottom: 6px;
+    z-index: 0;
+    padding: 10px;
+}
+.FollowProfilesContainer h2{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+ .swiper-container {
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+      }
+      .swiper-slide{
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        border:1px solid rgb(194, 191, 191);
+        border-radius: 5px;
+      }
+.SliderTopSection{
+    background-image: url(../images/banner1.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.SliderTopSection .imgbox5{
+    position: absolute;
+    top:70%;
+    width: 35px;
+    height: 35px;
+    background: white;
+}
+.sliderUserInfo{
+    padding: 10px;
+    width: 100%;
+    height: 110px;
+}
+.sliderUserInfo h3 a,.sliderUserInfo h5 a{
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    line-height: 20px;
+    color: rgb(68, 67, 67);
+}
+.sliderUserInfo h5 a{
+    font-size: 14px;
+    line-height: 12px;
+    color:rgb(134, 134, 134);
+    margin-top:8px;
+}
+.sliderFollowUser{
+    height: 40px;
+    padding: 10px;
+    padding-top:3px;
+}
+.sliderFollowUser a{
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
 .askQuestion {
     align-items: flex-start;
     background: white;
-    margin-top: 83px;
+    margin-bottom: 4px;
     padding: 30px 20px 30px 20px;
+    width: 100%;
 }
 
 .askQuestion a {
@@ -132,9 +296,8 @@ header ul li a {
 
 .content,
 .askQuestion,
-.float_left,
-.float_right,
-.float_right2 {
+.leftOfDesktop,
+.rightOfDesktop {
     border: 1px solid #dee0e1;
 }
 
@@ -163,11 +326,24 @@ header ul li a {
 
 }
 
-.author_info .imgbox {
+.author_info .imgbox,
+.imgbox5 {
     padding: 5px;
     border-radius: 50%;
     background: gray;
     margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* this property is for rightofdesktop div */
+.imgbox5 {
+    background: white;
+    height: 30px;
+    width: 30px;
 }
 
 .author_name h1 {
@@ -198,7 +374,8 @@ header ul li a {
 .blog_content p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.blog_content .imgbox2{
+
+.blog_content .imgbox2 {
     width: 100%;
     max-width: 620px;
     background: #f7f7f7;
@@ -210,13 +387,16 @@ header ul li a {
 }
 
 .blog_content img {
-    width:auto;
+    width: auto;
     max-width: 620px;
     height: 300px;
 }
-.options,.mobileNavbar{
+
+.options,
+.mobileNavbar {
     display: none;
 }
+
 .bottom_box {
     border-top: 1px solid rgb(105, 104, 104);
     padding-top: 5px;
@@ -230,232 +410,313 @@ header ul li a {
     display: flex;
     align-items: center;
 }
-
+.topic_name,.topic_credential{
+    color: white;
+}
 /* content section css ends here */
 
-@media screen and (max-width:1499px) {
+@media screen and (max-width:1050px) {
 
-    .float_right,
-    .float_right2,
-    .float_left {
+    .leftOfDesktop,
+    .rightOfDesktop {
         display: none;
     }
+
 }
 
 @media screen and (max-width:720px) {
+    .swiper-container {
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+      }
+    .desktopSuperContainer {
+        margin-top: 50px;
+    }
+
     /* header css for mobile */
     header {
         justify-content: space-between;
         align-items: center;
     }
+
     header ul {
         display: none;
     }
+
     header #logo {
         font-size: 10px;
-        display: flex;  /* for sidebar toggling */
+        display: flex;
+        /* for sidebar toggling */
         align-items: center;
     }
+
     /* header css ends here */
 
     /* sidebar css starts here */
-        .imgbox3{
-            display:block;
-            padding:5px;
-            margin-right:8px;
-            background: white;
-            border-radius: 50%;
-        }
-        div.mobileSidebar{
-            display: block;
-            position: fixed;
-            top:0%;
-            left:-100%;
-            height: 100%;
-            width:300px;
-            background-color: #080808;
-            transition: 0.5s;
-            z-index: 2;
-        }
-        div.active{
-            left: 0%;
-        }
-        .top_section_sidebar{
-            padding:10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-         .imgbox4 a{
-            background: white;
-            border-radius: 50%;
-            padding:15px;
-            width: 50px;
-            height: 50px;
-            justify-content: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } 
-        .userInfo h3{
-            color:white;
-            font-weight: 600;
-            margin-top:10px;
-            margin-bottom: 3px;
-            font-size: 20px;
-        }
-        .userInfo h5{
-            color:white;
-            font-weight: 100;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-        .sidebarList{
-            padding: 10px;
-        }
-        .sidebarList li {
-            list-style-type: none;
-        }
-        .sidebarList li a{
-            color:white;
-            display: block;
-            padding:10px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .cross i {
-            font-size:22px;
-        }
+    .imgbox3 {
+        display: block;
+        padding: 5px;
+        margin-right: 8px;
+        background: white;
+        border-radius: 50%;
+    }
+
+    div.mobileSidebar {
+        display: block;
+        position: fixed;
+        top: 0%;
+        left: -100%;
+        height: 100%;
+        width: 300px;
+        background-color: #080808;
+        transition: 0.3s;
+        z-index: 2;
+    }
+
+    div.active {
+        left: 0%;
+    }
+
+    /* .top_section_sidebar {
+        inherited from desktop css
+    } */
+
+    .imgbox4 a {
+        background: white;
+        /* inherited */
+    }
+
+    .userInfo h3 {
+        color: white;
+        /* remaining property inherited */
+    }
+
+    .userInfo h5 {
+        color: white;
+        /* inherited */
+    }
+
+    .sidebarList {
+        padding: 10px;
+    }
+
+    .sidebarList li {
+        list-style-type: none;
+    }
+
+    .sidebarList li a {
+        color: white;
+        /* inherited */
+    }
+
+    .cross i {
+        font-size: 22px;
+    }
+
     /* sidebar css ends here */
 
     /* search sidebar css starts here */
-    div.searchSidebar{
+    div.searchSidebar {
         display: block;
         position: fixed;
-        top:0%;
-        right:-100%;
+        top: 0%;
+        right: -100%;
         height: 100%;
-        width:100%;
+        width: 100%;
+        max-width: 410px;
         background-color: black;
         z-index: 2;
-        transition: 0.5s;
+        transition: 0.3s;
     }
-    div.active2{
+
+    div.active2 {
         right: 0%;
     }
-    .top_section_searchBar{
+
+    .top_section_searchBar {
         display: flex;
         padding: 10px;
-        padding-top:15px;
+        padding-top: 15px;
         padding-bottom: 15px;
         align-items: center;
     }
-    .back{
+
+    .back {
         margin-right: 5px;
         width: 10%;
     }
-    .top_section_searchBar form{
+
+    .top_section_searchBar form {
         display: flex;
         width: 90%;
     }
-    #searchBtn{
+
+    #searchBtn {
         background: white;
         border: none;
         padding: 5px 10px;
         margin-left: 5px;
     }
-    #searchInput{
-        width:100%;
-        max-width:300px;
+
+    #searchInput {
+        width: 100%;
+        max-width: 350px;
         border: none;
-        padding:10px 5px;
+        padding: 10px 5px;
     }
-    #searchInput:focus{
+
+    #searchInput:focus {
         outline: none;
     }
+
     /* search sidebar css ends here */
 
     /* options css starts here */
-    .options{
+    .options {
         display: flex;
         flex-direction: column;
         position: fixed;
         bottom: 10%;
-        right:2%;
+        right: 2%;
     }
-    .addPost{
-        width:45px;
+
+    .addPost {
+        width: 45px;
         height: 45px;
         border-radius: 50%;
         background: #1a1914;
-        margin:5px;
+        margin: 5px;
         display: flex;
         justify-content: center;
         align-items: center;
         -webkit-tap-highlight-color: transparent;
     }
-    .addQuestion{
+
+    .addQuestion {
         margin: 5px;
         -webkit-tap-highlight-color: transparent;
     }
+
     /* option css ends here */
-    
+
     /* content css starts here */
-    .content_container{
+    .content_container {
         margin-bottom: 50px;
+        margin-right: 0px;
+        margin-left: 0px;
     }
-    .blog_content .imgbox2{
+
+    .blog_content .imgbox2 {
         height: 280px;
     }
-    .blog_content img{
+
+    .blog_content img {
         height: 280px;
     }
+
     .searchIcon {
         display: block;
     }
 
     .askQuestion {
-        margin-top: 52px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
+
+    /* swiper css starts here */
+    /* swiper css ends here */
+
+
     /* content css ends here */
 
     /* mobile navbar css starts here */
-    .mobileNavbar{
+    .mobileNavbar {
         position: fixed;
         bottom: 0%;
-        left:0%;
+        left: 0%;
         width: 100%;
         background: rgb(26, 25, 20);
         display: flex;
+        -webkit-transform: translateZ(0);
     }
-    .mobileNavbar > div {
+
+    .mobileNavbar>div {
         flex: 1;
-        padding-top:15px;
+        padding-top: 15px;
         padding-bottom: 15px;
         display: flex;
         justify-content: center;
-        
     }
-    .mobileNavbar > div a{
+
+    .mobileNavbar>div a {
         color: white;
         display: block;
         -webkit-tap-highlight-color: transparent;
         transition: 0.5s;
     }
-    /* .mobileNavbar > div a i.fa{
-        font-size:20px;
-        -webkit-tap-highlight-color: transparent;
-    }
-    .mobileNavbar > div a i.active_links{
-        color:rgb(233, 152, 152);
-    } */
-    /* mobile navbar css ends here */
 }
-@media screen and (max-width:420px){
-    .blog_content .imgbox2{
+@media screen and (max-width:650px){
+    .swiper-container {
+        width: 100%;
+        max-width: 590px;
+      }
+      .sliderUserInfo h3 a{
+        font-size: 14px;
+      }
+      .sliderUserInfo h5 a{
+        font-size: 12px;
+      }
+      .sliderFollowUser a{
+          font-size: 12px;
+      }
+}
+@media screen and (max-width:599px){
+    .swiper-container {
+        width: 100%;
+        max-width: 550px;
+      }
+}
+@media screen and (max-width:550px){
+    .swiper-container {
+        width: 100%;
+        max-width: 480px;
+      }
+} 
+@media screen and (max-width:480px){
+    .swiper-container {
+        width: 100%;
+        max-width: 420px;
+      }
+} 
+@media screen and (max-width:420px) {
+    .blog_content .imgbox2 {
         height: 180px;
     }
-    .blog_content img{
+
+    .blog_content img {
         height: 180px;
     }
+    .swiper-container {
+        width: 100%;
+        max-width: 400px;
+      }
 }
+@media screen and (max-width:400px){
+    .swiper-container {
+        width: 100%;
+        max-width: 380px;
+      }
+} 
+@media screen and (max-width:380px){
+    .swiper-container {
+        width: 100%;
+        max-width: 360px;
+      }
+} 
+@media screen and (max-width:360px){
+    .swiper-container {
+        width: 100%;
+        max-width: 335px;
+      }
+} 
