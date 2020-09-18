@@ -278,6 +278,8 @@ header ul li a {
     border-radius: 10px;
     padding: 5px;
     font-size: 16px;
+    color:rgb(56, 56, 223);
+    font-weight:2500;
 }
 .askQuestion {
     align-items: flex-start;
@@ -705,13 +707,13 @@ header ul li a {
 @media screen and (max-width:400px){
     .swiper-container {
         width: 100%;
-        max-width: 380px;
+        max-width: 370px;
       }
 } 
 @media screen and (max-width:380px){
     .swiper-container {
         width: 100%;
-        max-width: 360px;
+        max-width: 350px;
       }
 } 
 @media screen and (max-width:360px){
