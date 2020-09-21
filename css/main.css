@@ -6,6 +6,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    -webkit-user-drag: none;
 }
 
 html {
@@ -51,6 +52,7 @@ header #logo {
 header ul {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 header ul li {
@@ -95,6 +97,8 @@ header ul li a {
     max-width: 300px;
     height: auto;
     background: white;
+    position: sticky;
+    top:90px;
 }
 
 .leftOfDesktop {
@@ -117,7 +121,6 @@ header ul li a {
 .imgbox4 a {
     background: black;
     border-radius: 50%;
-    padding: 15px;
     width: 50px;
     height: 50px;
     justify-content: center;
@@ -330,17 +333,22 @@ header ul li a {
 
 .author_info .imgbox,
 .imgbox5 {
-    padding: 5px;
     border-radius: 50%;
     background: gray;
     margin-right: 5px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.author_info .imgbox img{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    object-position: top;
+}
 /* this property is for rightofdesktop div */
 .imgbox5 {
     background: white;
@@ -349,12 +357,12 @@ header ul li a {
 }
 
 .author_name h1 {
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Montserrat';
 }
 
 .credential {
-    font-size: 12px;
+    font-size: 11px;
     color: rgb(134, 134, 134);
 }
 
@@ -488,7 +496,13 @@ header ul li a {
         background: white;
         /* inherited */
     }
-
+    .imgbox4  img{
+        width: 46px;
+        height: 46px;
+        object-position: top;
+        object-fit: cover;
+        border-radius: 50%;
+    }
     .userInfo h3 {
         color: white;
         /* remaining property inherited */
